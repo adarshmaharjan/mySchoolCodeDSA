@@ -19,7 +19,7 @@ void reverse(Node **head)
   {
     s.push(temp);
     temp = temp->next;
-  }
+  } 
   temp = s.top();
   *head = temp;
   s.pop();
@@ -44,12 +44,16 @@ void pushIntoStack(Node **head, int value)
     *head = temp;
     return;
   }
+  // * for insertion in the tail
+  // while (tempHead->next != NULL)
+  // {
+  //   tempHead = tempHead->next;
+  // }
+  // tempHead->next = temp;
+  // * for insertion in the tail
 
-  while (tempHead->next != NULL)
-  {
-    tempHead = tempHead->next;
-  }
-  tempHead->next = temp;
+  temp->next = *head;
+  *head = temp;
 }
 
 void printValue(Node *head)
