@@ -159,6 +159,7 @@ int main()
     insertNode(i, i);
     i += 1;
   }
+  printf("hello from lvim");
   printList();
   deleteNode(2);
   printList();
