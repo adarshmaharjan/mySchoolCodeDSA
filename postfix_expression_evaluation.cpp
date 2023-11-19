@@ -9,6 +9,7 @@ public:
   unsigned capacity;
   int *array;
 };
+
 Stack *createStack(unsigned capacity)
 {
   Stack *stack = new Stack();
